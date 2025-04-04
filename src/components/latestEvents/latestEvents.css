@@ -1,0 +1,119 @@
+.latest-event {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+
+    h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .event-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      
+      .event-images {
+        display: flex;
+        gap: 1rem;
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+      }
+
+      .event-info {
+        position: relative;
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--royal-blue);
+        }
+
+        .info-group{
+            display: flex;
+            gap: 10px;
+            /* justify-content: center; */
+            /* position: absolute;
+            top: 38%;
+            left: 50%; */
+
+            section{
+                strong{
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    padding: 0 5px;
+                    color: var(--royal-blue);
+                    
+                    .bullet-icon{
+                        font-weight: bold;
+                        color: var(--text-maroon);
+                        font-size: 2rem;
+                        padding: 0 4px;
+                    }
+                }
+                
+                ul li{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #555;
+
+            strong{
+                font-weight: 600;
+                font-size: 1.8rem;
+                padding: 0 5px;
+                color: var(--royal-blue);
+                
+                .bullet-icon{
+                    font-weight: bold;
+                    color: var(--text-maroon);
+                    font-size: 2rem;
+                    padding: 0 4px;
+                }
+            }
+        }
+
+        .prizes{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            strong{
+                font-weight: 600;
+                font-size: 1.8rem;
+                padding: 0 5px;
+                color: var(--royal-blue);
+                
+                .bullet-icon{
+                    font-weight: bold;
+                    color: var(--text-maroon);
+                    font-size: 2rem;
+                    padding: 0 4px;
+                }
+            }
+        }
+
+        .event-disclaimer {
+          font-size: 1.2rem;
+          color: #777;
+          margin-top: 1rem;
+          font-style: italic;
+          text-align: center;
+        }  
+      }
+    }
+}  

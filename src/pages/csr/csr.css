@@ -1,0 +1,86 @@
+.csr{
+    .csr-intro, .csr-ways, .csr-impact, .csr-testimonials, .csr-cta{
+        padding: 0.5rem;
+        
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--deep-blue);
+        }
+
+        p, blockquote{
+            font-size: 1.6rem;
+        }
+    }
+
+    .csr-ways .csr-options {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .csr-card{
+            width: 280px;
+            padding: 1.5rem;
+            background-color: var(--bg-secondary);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--box-shadow-light-blue);
+
+            h3{
+                color: var(--royal-blue);
+                font-size: 1.8rem;
+            }
+
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .csr-impact ul{
+        list-style: none;
+        padding: 0;
+        
+        li {
+            font-size: 1.4rem;
+            
+            strong{
+                font-size: 1.6rem;
+                color: var(--royal-blue);
+            }            
+        }
+    }
+
+    .csr-testimonials blockquote{
+        text-align: center;
+
+        cite{
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--light-blue);
+        }
+    }
+
+    .csr-cta {
+        p{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            a{
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: var(--text-gold);
+                transition: background-color 0.5s ease;
+                padding: 0.8rem;
+                border-radius: 1.5rem;
+
+                &:hover{
+                    background-color: var(--royal-blue);
+                }
+            }
+        }
+    }
+}

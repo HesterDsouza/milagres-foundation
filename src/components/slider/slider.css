@@ -1,0 +1,219 @@
+.slider-container{
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--box-shadow);
+    height: 450px;
+    z-index: 1;
+
+    /* .hero{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: max-content;
+        padding: 5px;
+        background-color: var(--deep-blue-faded);
+        
+        .hero-overlay{
+            padding: 2px;
+
+            h1,p{
+                color: #fff;
+                text-shadow: 2px 2px 2px var(--text-secondary);
+            }
+
+            h1{
+                font-size: 2rem;
+            }
+
+            p{
+                font-size: 1.8rem;
+            }
+        }
+    } */
+
+    .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        &.active{
+            opacity: 1;
+        }
+
+        .slider-text{
+            position: absolute;
+            bottom: 8%;
+            left: 0%;
+            padding: 10px;
+            /* background: linear-gradient(135deg, transparent 0%, transparent 5%, var(--deep-blue-faded) 10%, var(--deep-blue-faded) 90%, transparent 95%, transparent 100%); */
+            background-color: var(--deep-blue-faded);
+            z-index: 3;
+            width: 100%;
+            
+            p{
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;             
+                gap: 5px;
+                font-size: 1.8rem;
+                color: #fff;
+                text-shadow: 2px 2px 2px var(--text-secondary);
+
+                .slider-link{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: var(--text-gold);
+                    text-shadow: 2px 2px 2px var(--text-secondary);
+                    transition: transform 0.5s ease-in-out;
+                    pointer-events: auto;
+
+                    &:hover{
+                        transform: translateY(-15%);
+                    }
+                }
+            }
+        }
+    }
+
+    .slide-arrow{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 24px;
+        color: var(--royal-blue);
+        transition: background-color 0.8s ease, color 0.8s ease;
+        
+        &:hover{
+            background-color: var(--royal-blue);
+            color: #fff;
+        }
+
+        &.prev{
+            left: 0px;
+        }
+
+        &.next{
+            right: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 1024px){
+        height: 400px;
+
+        .slide{
+            height: 400px;
+
+            img{
+                height: 400px;
+            }
+
+            .slider-text{
+                bottom: 6%;
+
+                p{
+                    font-size: 1.6rem;
+
+                    .slider-link{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .slide-arrow{
+            font-size: 2.2rem;
+            padding: 9px 18px;
+        }
+    }
+
+    @media only screen and (max-width: 900px){
+        height: 350px;
+
+        .slide{
+            height: 350px;
+
+            img{
+                height: 350px;
+            }
+        }
+        
+        .slide-arrow{
+            font-size: 2rem;
+            padding: 8px 16px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: 300px;
+
+        .slide {
+          height: 300px;
+    
+          img {
+            height: 300px;
+          }
+
+          .slider-text{
+            bottom: 4%;
+            padding: 8px;
+
+            p{
+                font-size: 1.4rem;
+
+                .slider-link{
+                    font-size: 1.6rem;
+                }
+            }
+          }
+        }
+    
+        .slide-arrow {
+          font-size: 18px;
+          padding: 6px 12px;
+        }
+    }
+
+    @media (max-width: 400px){
+        height: 280px;
+
+        .slide{
+            height: 280px;
+
+            img{
+                height: 280px;
+            }
+
+            .slider-text p{
+                font-size: 1.2rem;
+
+                .slider-link{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.ourWork{
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 2rem;
+        width: 100%;
+
+        .card.our-work{
+            cursor: default;
+
+            &:nth-child(odd):last-child{
+                grid-column: span 2;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .projects {
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .projects {
+            grid-template-columns: repeat(2, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+
+            .card.our-work {
+                width: 100%;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .projects {
+            gap: 1rem;
+
+            .card.our-work {
+                max-width: 350px;
+            }
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .projects {
+            gap: 0.8rem;
+
+            .card.our-work {
+                max-width: 320px;
+            }
+        }
+    }
+}

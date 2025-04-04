@@ -1,0 +1,254 @@
+.navbar{
+    padding: 8px;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    box-shadow: 0 4px 6px var(--box-shadow-light-blue);
+    position: relative;
+    top: 0.1px;
+    z-index: 9;
+    margin-bottom: 8px;
+   
+    .logo img{
+        height: 15rem;
+        width: 15rem;
+        cursor: pointer;
+    }
+
+    .links-group{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .hamburger{
+            display: none;
+        }
+        
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    
+            .link{
+                font-size: 1.8rem;
+                padding: 5px;
+                border: none;
+                border-radius: 8px;
+                transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    
+                &:hover{
+                    color: #fff;
+                }
+    
+                &.active{
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+    
+            }
+        }
+    
+        .donate{
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 10px;
+            background-color: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+    
+            .icon{
+                font-size: 2rem;
+                font-weight: 700;  
+            }
+    
+            &.active{
+                color: var(--royal-blue);
+            }
+            
+            &:hover{
+                color: var(--royal-blue);
+            }
+        }
+    }
+    
+
+    @media (max-width: 1024px){
+        .logo img{
+            width: 14rem;
+            height: 14rem;
+        }
+
+        .links-group{
+            .links{
+                gap: 8px;
+    
+                .link{
+                    font-size: 1.6rem;
+    
+                    &.active{
+                        font-size: 1.8rem;
+                    }
+    
+                }
+            }
+    
+            .donate{
+                font-size: 1.8rem;
+    
+                .icon{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px){
+        .logo img{
+            width: 12rem;
+            height: 12rem;
+        }
+
+        .links-group{
+            .links{
+                gap: 6px;
+    
+                .link{
+                    font-size: 1.5rem;
+    
+                    &.active{
+                        font-size: 1.7rem;
+                    }
+    
+                }
+            }
+    
+            .donate{
+                font-size: 1.7rem;
+    
+                .icon{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px){
+        .logo img{
+            width: 13rem;
+            height: 13rem;
+        }
+
+        .links-group{
+            .hamburger{
+                display: block;
+                font-size: 2.2rem;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            .links{
+                visibility: hidden;
+                opacity: 0;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 5%;
+                padding: 10px;
+                border: none;
+                border-radius: 0 0 15px 15px;
+                background: var(--light-blue);
+                transition: visibility 0.4s, opacity 0.4s ease-in-out;
+    
+                .link{
+                    font-size: 1.6rem;
+    
+                    &.active{
+                        font-size: 1.8rem;
+                    }
+    
+                }
+
+                &.open{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+    
+            .donate{
+                font-size: 1.6rem;
+    
+                .icon{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px){
+        .logo img{
+            width: 12rem;
+            height: 12rem;
+        }
+
+        .links-group{
+            .hamburger{
+                font-size: 2rem;
+            }
+
+            .links{
+                .link{
+                    font-size: 1.5rem;
+
+                    &.active{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            .donate{
+                font-size: 1.5rem;
+
+                .icon{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 360px){
+        .logo img{
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .links-group{
+            .hamburger{
+                font-size: 1.8rem;
+            }
+
+            .links{
+                .link{
+                    font-size: 1.4rem;
+
+                    &.active{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .donate{
+                font-size: 1.4rem;
+
+                .icon{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
