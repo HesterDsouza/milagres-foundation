@@ -1,0 +1,180 @@
+.contactUs{
+    .contact-us-intro, .contact-us-form{
+        padding: 1.5rem;
+
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--deep-blue);
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+    }
+
+    .contact-us-form{
+        background-color: var(--bg-secondary);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px var(--box-shadow-light-blue);
+        max-width: 500px;
+        margin: 1rem auto;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1rem;
+
+            .form-group{
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    color: var(--royal-blue);
+                    margin-bottom: 0.5rem; 
+                }
+
+                input, textarea {
+                    padding: 0.8rem;
+                    border: 1px solid var(--box-shadow);
+                    border-radius: 5px;
+                    font-size: 1.6rem;
+                    background-color: var(--bg);
+                    color: var(--text-primary);
+                    width: 100%;
+                }
+
+                textarea{
+                    resize: none;
+                }
+            }
+
+            .contact-submit{
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: var(--text-gold);
+                background-color: var(--royal-blue);
+                padding: 1rem;
+                border-radius: 1.5rem;
+                text-align: center;
+                cursor: pointer;
+                border: none;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: var(--deep-blue);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .contact-us-intro, .contact-us-form {
+            padding: 1rem;
+    
+            h2 {
+                font-size: 1.8rem;
+            }
+    
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    
+        .contact-us-form form {
+            .form-group {
+                label {
+                    font-size: 1.6rem;
+                }
+    
+                input, textarea {
+                    font-size: 1.4rem;
+                }
+            }
+    
+            .contact-submit {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .contact-us-intro, .contact-us-form {
+            h2 {
+                font-size: 1.6rem;
+            }
+    
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    
+        .contact-us-form {
+            max-width: 450px;
+    
+            form {
+                .form-group {
+                    label {
+                        font-size: 1.5rem;
+                    }
+    
+                    input, textarea {
+                        font-size: 1.3rem;
+                    }
+                }
+    
+                .contact-submit {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .contact-us-form {
+            max-width: 400px;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .contact-us-intro, .contact-us-form {
+            h2 {
+                font-size: 1.4rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    
+        .contact-us-form {
+            max-width: 300px;
+    
+            form {
+                .form-group {
+                    label {
+                        font-size: 1.4rem;
+                    }
+    
+                    input, textarea {
+                        font-size: 1.2rem;
+                    }
+                }
+    
+                .contact-submit {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 300px) {
+        .contact-us-form {
+            max-width: 250px;
+        }
+    }
+}
