@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet-async"
 
-const SEO = ({title, description, keywords, image, url}) => {
+const SEO = ({title, description, keywords}) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -13,17 +13,17 @@ const SEO = ({title, description, keywords, image, url}) => {
 }
 
 SEO.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    keywords: PropTypes.string,
-    image: PropTypes.string,
-    url: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  keywords: PropTypes.string,
+  // image: PropTypes.string,
+  // url: PropTypes.string,
 }
 
 SEO.defaultProps = {
     keywords: "milagres, ngo, social work, donation, charity, education, healthcare",
-    image: "",
-    url: ""
+    // image: "",
+    // url: ""
 }
 
 export default SEO
