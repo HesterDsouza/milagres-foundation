@@ -4,6 +4,8 @@ import "./csr.css"
 import SEO from "../../components/SEO/SEO"
 
 const CSR = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="csr">
       <SEO 
@@ -13,7 +15,7 @@ const CSR = () => {
       <HeroSection 
         title={"Corporate Social Responsibility (CSR)"} 
         subTitle={"Partner with Milagres Foundation to create a lasting social impact."} 
-        image={"/csr-hero.jpg"} image_alt={"Corporate Social Responsibility"}
+        image={`${base}csr-hero.jpg`} image_alt={"Corporate Social Responsibility"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}/>
       <section className="csr-intro">

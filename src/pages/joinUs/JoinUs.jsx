@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import SEO from "../../components/SEO/SEO";
 
 const JoinUs = () => {
+  const base = import.meta.env.BASE_URL;
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", reason: ""
   })
@@ -83,7 +84,7 @@ const JoinUs = () => {
       <HeroSection
         title={"Join Us"}
         subTitle={"Be a part of Milagres Foundation and make a difference in the community."}
-        image={"/join-us-hero.jpg"}
+        image={`${base}join-us-hero.jpg`}
         image_alt={"Join Us"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}

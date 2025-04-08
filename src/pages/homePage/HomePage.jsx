@@ -7,8 +7,13 @@ import SEO from "../../components/SEO/SEO";
 const HomePage = () => {
 
   const navigate = useNavigate();
+  const base = import.meta.env.BASE_URL;
+  // console.log("Base URL: ", base);
 
-  const slides = ["/images/blood-donation-camp (7).jpg", "/slider3.jpg", "/slider4.jpg"];
+  const slides = [
+    `${base}images/blood-donation-camp (7).jpg`, 
+    `${base}slider3.jpg`, `${base}slider4.jpg`
+  ];
 
   const slideTexts = [
     <p key={"join"}>
@@ -30,19 +35,27 @@ const HomePage = () => {
   const activities = [
     {
       images: [
-        "/images/blood-donation-camp (4).jpg ","/images/blood-donation-camp (5).jpg", "/images/blood-donation-camp (6).jpg"
+        `${base}images/blood-donation-camp (4).jpg`,
+        `${base}images/blood-donation-camp (5).jpg`,
+        `${base}images/blood-donation-camp (6).jpg`
       ],
       title: "Blood Donation Camps"
     },
     {
       images: [
-        "/images/plantation (7).jpg", "/images/plantation (9).jpg", "/images/tree-plantation (1).jpg", "/images/tree-plantation (8).jpg",
+        `${base}images/plantation (7).jpg`,
+        `${base}images/plantation (9).jpg`,
+        `${base}images/tree-plantation (1).jpg`,
+        `${base}images/tree-plantation (8).jpg`
       ],
       title: "Tree Plantations"
     },
     {
       images: [
-        "/images/food-clothes-distribution (2).jpg", "/images/food-clothes-distribution (3).jpg", "/images/food-distribution (2).jpg", "/images/food-distribution (4).jpg",
+        `${base}images/food-clothes-distribution (2).jpg`,
+        `${base}images/food-clothes-distribution (3).jpg`,
+        `${base}images/food-distribution (2).jpg`,
+        `${base}images/food-distribution (4).jpg`
       ],
       title: "Food & Grocery Distributions"
     },

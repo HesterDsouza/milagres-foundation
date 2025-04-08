@@ -7,6 +7,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import SEO from "../../components/SEO/SEO";
 
 const Donate = () => {
+  const base = import.meta.env.BASE_URL;
   
   // useEffect(() => {
   //   const script = document.createElement("script");
@@ -84,7 +85,7 @@ const Donate = () => {
       <HeroSection
         title="Support Our Cause"
         subTitle="Your generosity helps us continue our mission of uplifting communities in need."
-        image="/images/donations (2).jpg"
+        image={`${base}images/donations (2).jpg`}
         image_alt="Donation Event"
       />
 
@@ -98,7 +99,7 @@ const Donate = () => {
           </p>
           <button onClick={() => setShowQR(true)} className="donate-btn">Donate Now</button>
         </div>
-        <img src="/images/donation-joyful-preschool (3).jpg" alt="Helping Hands" className="donate-image"/>
+        <img loading="lazy" src={`${base}images/donation-joyful-preschool (3).jpg`} alt="Helping Hands" className="donate-image"/>
       </section>
 
       {showQR && (
@@ -106,7 +107,7 @@ const Donate = () => {
           <div className="qr-content">
             <h3>Scan to Donate <span><FontAwesomeIcon onClick={() => setShowQR(false)} className="close-icon" icon={faClose}/></span></h3>
             <p>Use any UPI app to scan the QR code and donate.</p>
-            <img src="/donation-qr-code.jpg" alt="Donation QR Code" />
+            <img loading="lazy" src={`${base}donation-qr-code.jpg`} alt="Donation QR Code" />
           </div>
         </div>
       )}
@@ -115,12 +116,12 @@ const Donate = () => {
         <h2>How Your Donation Helps</h2>
         <div className="grid-container">
           <div className="grid-item">
-            <img src="/images/drawing-competion-christmas-day (2).jpg" alt="Education Support"/>
+            <img loading="lazy" src={`${base}images/drawing-competion-christmas-day (2).jpg`} alt="Education Support"/>
             <h3>Education</h3>
             <p>Providing books, school supplies, and scholarships for underprivileged children.</p>
           </div>
           <div className="grid-item">
-            <img src="/images/blood-donation-camp (1).jpg" alt="Medical Assistance"/>
+            <img loading="lazy" src={`${base}images/blood-donation-camp (1).jpg`} alt="Medical Assistance"/>
             <h3>Healthcare</h3>
             <p>Funding medical treatments, health checkups, and emergency care for those in need.</p>
           </div>

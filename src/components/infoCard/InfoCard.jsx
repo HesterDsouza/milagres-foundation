@@ -20,7 +20,7 @@ const InfoCard = ({ images, title, onClick, onKeyDown, class_name = "" }) => {
       <div className="image-wrapper">
         {images.map((src, index) => (
           <div key={index} className={`slide ${index === activeSlide ? "active" : ""}`}>
-            <img tabIndex={0} src={src} alt={`${title} Slide ${index + 1}`} />
+            <img loading="lazy" tabIndex={0} src={src} alt={`${title} Slide ${index + 1}`} />
           </div>
         ))}
       </div>

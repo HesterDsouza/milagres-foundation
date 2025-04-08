@@ -5,17 +5,18 @@ import {faFacebookF, faInstagram, faXTwitter, faYoutube} from "@fortawesome/free
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
 const Footer = () => {
+  const base = import.meta.env.BASE_URL;
   return (
     <div className="footer">
       <div className="logo-links">
         <div className="logo">
-          <img src="/logo1.jpg" alt="" />
+          <img src={`${base}logo1.jpg`} alt="" />
         </div>
         <div className="links">
           <div className="quick-links">
             <Link className="link" to="/our-work">Our Work</Link>
             <Link className="link" to="/about-us">About Us</Link>
-            <Link className="link" to="/corporate-social-responsibility">CSR</Link>
+            {/* <Link className="link" to="/corporate-social-responsibility">CSR</Link> */}
             <Link className="link" to="/join-us">Join Our Team</Link>
             <Link className="link" to="/contact-us">Contact Us</Link>
             <Link className="link" to="/donate">Donate</Link>

@@ -24,7 +24,7 @@ const Slider = ({ images, texts = [], class_name = "" }) => {
     <section className={`slider-container ${class_name}`}>
         {images.map((src, index) => (
           <div key={index} className={`slide ${index === slideIndex ? "active" : ""}`}>
-            <img src={src} alt={`Slide ${index + 1}`} />
+            <img loading="lazy" src={src} alt={`Slide ${index + 1}`} />
             {texts[index] && (
               <div className="slider-text">
                 {texts[index]}

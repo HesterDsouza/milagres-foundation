@@ -6,6 +6,8 @@ import emailjs from "@emailjs/browser"
 import SEO from "../../components/SEO/SEO";
 
 const ContactUs = () => {
+  const base = import.meta.env.BASE_URL;
+
   const [formData, setFormData] = useState({
     name: "", email: "", message: ""
   })
@@ -75,7 +77,7 @@ const ContactUs = () => {
       <HeroSection
         title={"Contact Us"}
         subTitle={"Get in touch with Milagres Foundation for inquiries, partnerships, and support."}
-        image={"/contact-us-hero.jpg"}
+        image={`${base}contact-us-hero.jpg`}
         image_alt={"Contact Us"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}

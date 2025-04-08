@@ -6,16 +6,18 @@ import { faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons
 import SEO from "../../components/SEO/SEO";
 
 const AboutUs = () => {
+  const base = import.meta.env.BASE_URL;
+
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const compliance_reports = [
-    {name: "CSR Approval Letter", file: "/reports/Approval Letter for form CSR1-4.pdf"},
-    {name: "Certificate of Registration", file: "/reports/Document (MF).pdf"},
-    {name: "Audit Report 21-22", file: "/reports/MF AUDIT REPORT 21-22.pdf"},
-    {name: "Audit Report 22-23", file: "/reports/MF AUDIT REPORT 22-23.pdf"},
-    {name: "Statement of Accounts 20-21", file: "/reports/MF STATMENT OF ACCOUNTS 20-21.pdf"},
-    {name: "Milagres Foundation 80G", file: "/reports/MILAGRES FOUNDATION 80G.pdf"},
-    {name: "Milagres Foundation 12A", file: "/reports/MILAGRES FOUNDATION 12A.pdf"},
+    {name: "CSR Approval Letter", file: `${base}reports/Approval Letter for form CSR1-4.pdf`},
+    {name: "Certificate of Registration", file: `${base}reports/Document (MF).pdf`},
+    {name: "Audit Report 21-22", file: `${base}reports/MF AUDIT REPORT 21-22.pdf`},
+    {name: "Audit Report 22-23", file: `${base}reports/MF AUDIT REPORT 22-23.pdf`},
+    {name: "Statement of Accounts 20-21", file: `${base}reports/MF STATMENT OF ACCOUNTS 20-21.pdf`},
+    {name: "Milagres Foundation 80G", file: `${base}reports/MILAGRES FOUNDATION 80G.pdf`},
+    {name: "Milagres Foundation 12A", file: `${base}reports/MILAGRES FOUNDATION 12A.pdf`},
   ]
 
   const toggleAccordion = (index) => {
@@ -31,7 +33,7 @@ const AboutUs = () => {
       <HeroSection 
         title = "About Milagres Foundation"
         subTitle = "Empowering marginalized communities through education, healthcare, and support since 2014."
-        image = "/images/blood-donation-camp (7).jpg"
+        image = {`${base}images/blood-donation-camp (7).jpg`}
         image_alt = "Milagres Foundation Team"
       />
 
@@ -50,7 +52,7 @@ const AboutUs = () => {
             provide innovative solutions to deep-rooted development problems.
           </p>
         </div>
-        <img src="/images/food-clothes-distribution (3).jpg" alt="Community Work" className="about-image"/>
+        <img loading="lazy" src={`${base}images/food-clothes-distribution (3).jpg`} alt="Community Work" className="about-image"/>
       </section>
 
       <section className="mission-vision">
@@ -68,7 +70,7 @@ const AboutUs = () => {
         </p>
         <div className="grid-container">
           <div className="grid-item">
-            <img src="/images/food-distribution (2).jpg" alt="Food Distribution"/>
+            <img loading="lazy" src={`${base}images/food-distribution (2).jpg`} alt="Food Distribution"/>
             <h3>Our Mission</h3>
             <p>
               We strive to uplift economically weaker sections of society by ensuring access to education, medical 
@@ -76,7 +78,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="grid-item">
-            <img src="/images/drawing-competion-christmas-day (2).jpg" alt="Community Support"/>
+            <img loading="lazy" src={`${base}images/drawing-competion-christmas-day (2).jpg`} alt="Community Support"/>
             <h3>Our Vision</h3>
             <p>
               A future where every individual has equal opportunities, access to basic necessities, and the right to 

@@ -4,7 +4,7 @@ import "./heroSection.css"
 const HeroSection = ({title, subTitle, image, image_alt, attribution_link, attribution_text}) => {
   return (
     <section className="hero-section">
-      <img tabIndex={0} src={image} alt={image_alt} className="hero-image"/>
+      <img loading="lazy" tabIndex={0} src={image} alt={image_alt} className="hero-image"/>
       <div className="hero-content">
         <div className="hero-group">
           <h1 tabIndex={0}>{title}</h1>
