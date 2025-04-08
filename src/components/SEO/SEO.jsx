@@ -1,9 +1,15 @@
 import PropTypes from "prop-types"
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async"
 
 const SEO = ({title, description, keywords}) => {
+  useEffect(() => {
+    document.title = title
+    // console.log("Helmet SEO updated:", title);
+  }, [title]);
+
   return (
-    <Helmet>
+    <Helmet >
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords} />

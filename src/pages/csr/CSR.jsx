@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom"
 import HeroSection from "../../components/heroSection/HeroSection"
 import "./csr.css"
+import SEO from "../../components/SEO/SEO"
 
 const CSR = () => {
   return (
     <div className="csr">
+      <SEO 
+        title="Corporate-Social-Responsibility | Milagres Foundation"
+        description="Discover how Milagres Foundation partners with organizations to drive impactful CSR initiatives, fostering community development and positive social change."
+      />
       <HeroSection 
         title={"Corporate Social Responsibility (CSR)"} 
         subTitle={"Partner with Milagres Foundation to create a lasting social impact."} 
