@@ -24,7 +24,7 @@ const App = () => {
     }
   ], 
 {
-  basename: "/milagres-foundation/"
+  basename: "/"
 })
   return (
     <RouterProvider router={router}/>
