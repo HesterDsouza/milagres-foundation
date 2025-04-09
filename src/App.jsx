@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import {createBrowserRouter, RouterProvider, useNavigate} from "react-router-dom"
 import RootLayout from "./layouts/rootLayout/RootLayout";
 import HomePage from "./pages/homePage/HomePage";
 import OurWork from "./pages/ourWork/OurWork";
@@ -7,11 +7,30 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import JoinUs from "./pages/joinUs/JoinUs";
 import ContactUs from "./pages/contactUs/ContactUs";
 import Donate from "./pages/donate/Donate";
+import { useEffect } from "react";
+
+const RedirectHandler = ({children}) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = sessionStorage.getItem("redirect");
+    if(path){
+      sessionStorage.removeItem("redirect")
+      navigate(path);
+    }
+  },[navigate])
+
+  return children;
+}
 
 const App = () => {
   const router = createBrowserRouter([
     {
-      element: <RootLayout/>,
+      element: (
+        <RedirectHandler>
+          <RootLayout/>
+        </RedirectHandler>
+      ),
       children: [
         { path: "/", element: <HomePage/> },
         { path: "/our-work", element: <OurWork/> },
