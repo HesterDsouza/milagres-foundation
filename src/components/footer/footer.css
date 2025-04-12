@@ -63,17 +63,17 @@
                         color: var(--youtube);
                     }
         
-                    &:hover{
-                        cursor: pointer;
-                        transform: scale(1.5);
-                    }
                     
                     .social-icon{
                         font-size: 2rem;
                         font-weight: 600;
                         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
                         margin: 0 10px;
-            
+                        
+                        &:hover{
+                            cursor: pointer;
+                            transform: scale(1.5);
+                        }
                     }
                 }        
             }
