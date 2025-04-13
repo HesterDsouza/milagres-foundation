@@ -123,11 +123,13 @@
 
             p{
                 font-size: 1.6rem;
+                display: flex;
+                flex-wrap: wrap;
             }
 
             img{
                 width: 200px;
-                height: 200px;
+                height: 100%;
                 margin: 10px 0;
             }
         }
@@ -317,6 +319,19 @@
             }
         }
     }
+
+    @media (max-width: 460px){
+        .qr-modal {
+            .qr-content {
+                width: 95%;
+
+                .close-icon {
+                    top: 17%;
+                    left: 45%;
+                }
+            }
+        }
+    }
     
     @media (max-width: 360px) {
         .donate-content {
@@ -367,11 +382,6 @@
 
                 p {
                     font-size: 1.4rem;
-                }
-
-                img {
-                    width: 180px;
-                    height: 180px;
                 }
             }
         }
