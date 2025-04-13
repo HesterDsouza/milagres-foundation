@@ -11,8 +11,8 @@ const HomePage = () => {
   // console.log("Base URL: ", base);
 
   const slides = [
-    `${base}images/blood-donation-camp (7).jpg`, 
-    `${base}slider3.jpg`, `${base}slider4.jpg`
+    `${base}Hockey Tournament/hockey-slider.jpg`, 
+    `${base}images/drawing-competion-christmas-day (1).jpg`, `${base}slider3.jpg`
   ];
 
   const slideTexts = [
