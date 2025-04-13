@@ -9,6 +9,12 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleLinkClick = () =>{
+    setTimeout(() => {
+      setMenuOpen(false);
+    }, 2000)
+  }
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -25,7 +31,7 @@ const Navbar = () => {
         </nav>
         <NavLink className="donate" to="/donate">Donate <FontAwesomeIcon className="icon" icon={faIndianRupeeSign} /></NavLink>
         <FontAwesomeIcon className="hamburger" 
-          onClick={() => setMenuOpen(!menuOpen)} 
+          onClick={() => {setMenuOpen(!menuOpen); handleLinkClick();}}
           icon={menuOpen ? faTimes : faBars} />
       </div>
     </div>

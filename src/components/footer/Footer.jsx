@@ -48,6 +48,24 @@ const Footer = () => {
               </a>
             </p>
           </div>
+          <div className="address-phone">
+            <address>
+              <div className="group">
+                <p>Milagres Foundation,</p>
+                <p>C/O Anand Corner Apartment,</p>
+              </div>
+              <div className="group">
+                <p>Office No. 10, First Floor,</p>
+                <p>Near Anand Park,</p>
+              </div>
+              <div className="group">
+                <p>Wadgoasheri, Pune - 411014</p>
+              </div>
+            </address>
+            <div className="phone">
+              <p>Contact No: +91 9422026832</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="copyright">
