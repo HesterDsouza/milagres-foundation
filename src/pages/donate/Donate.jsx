@@ -107,7 +107,7 @@ const Donate = () => {
           <div className="qr-content">
             <h3>Scan to Donate <span><FontAwesomeIcon onClick={() => setShowQR(false)} className="close-icon" icon={faClose}/></span></h3>
             <p>Use any UPI app to scan the QR code and donate.</p>
-            <img loading="lazy" src={`${base}donation-qr-code.jpg`} alt="Donation QR Code" />
+            <img loading="lazy" src={`${base}QR-Code.jpg`} alt="Donation QR Code" />
           </div>
         </div>
       )}
