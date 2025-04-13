@@ -67,7 +67,7 @@ const JoinUs = () => {
     .then((response) => {
       console.log("Success!", response.status, response.text, formData)
       toast.success("Thank you for joining us! We will get back to you soon.")
-      setFormData({name:"", email:"", phone:""}) // Reset form after successful submission
+      setFormData({name:"", email:"", phone:"", reason:""}) // Reset form after successful submission
     })
     .catch((error) => {
       toast.error("Oops! Something went wrong. Please try again.")
@@ -118,9 +118,9 @@ const JoinUs = () => {
           </div>
           <div className="form-group">
             <label htmlFor="reason">Please state your reason for joining the foundation</label>
-            <input name="reason" type="text" id="reason" 
-              placeholder="Enter your reason" required
-              value={formData.reason} onChange={handleChange}/>            
+            <textarea name="reason" id="reason" 
+              placeholder="State your reason" rows="4" required
+              value={formData.reason} onChange={handleChange}/>         
           </div>
           <button type="submit" className="join-submit">Join Us</button>
         </form>

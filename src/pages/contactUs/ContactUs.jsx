@@ -9,7 +9,7 @@ const ContactUs = () => {
   const base = import.meta.env.BASE_URL;
 
   const [formData, setFormData] = useState({
-    name: "", email: "", message: ""
+    name: "", email: "", phone: "", message: ""
   })
 
   const handleChange = (e) => {
@@ -33,6 +33,14 @@ const ContactUs = () => {
       return false;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       toast.error("Invalid email address");
+      return false;
+    }
+
+    if (!formData.phone.trim()) {
+      toast.error("Phone number is required.");
+      return false;
+    } else if (!/^\d{6,15}$/.test(formData.phone.replace(/[^\d]/g, ""))) {
+      toast.error("Invalid phone number");
       return false;
     }
 
@@ -60,7 +68,7 @@ const ContactUs = () => {
     .then((response) => {
       console.log("Success!", response.status, response.text, formData)
       toast.success("Thank you for contacting us! We will get back to you soon.")
-      setFormData({name:"", email:"", phone:""}) // Reset form after successful submission
+      setFormData({name:"", email:"", phone:"", message:""}) // Reset form after successful submission
     })
     .catch((error) => {
       toast.error("Oops! Something went wrong. Please try again.")
@@ -104,10 +112,16 @@ const ContactUs = () => {
             value={formData.email} onChange={handleChange}/>
           </div>
           <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input name="phone" type="tel" id="phone" autoComplete="on"
+              placeholder="Enter your phone number" required 
+              value={formData.phone} onChange={handleChange}/>
+          </div>
+          <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" 
+            <textarea name="message" id="message"
             placeholder="Write your message" rows="4" required
-            value={formData.message} onChange={handleChange}></textarea>
+            value={formData.message} onChange={handleChange} />
           </div>
           <button type="submit" className="contact-submit">Send Message</button>
         </form>
