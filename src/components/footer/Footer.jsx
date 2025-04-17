@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import "./footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faFacebookF, faInstagram, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons"
+import {faFacebookF, faInstagram, faLinkedin, faThreads, faYoutube} from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           <div className="social-links">
             <p>Follow Us: </p>
-            <a href="" 
+            <a href="https://www.facebook.com/share/1AQbgLzkhr/" 
               target="_blank">
               <FontAwesomeIcon className="social-icon" icon={faFacebookF} />
             </a>
@@ -31,13 +31,17 @@ const Footer = () => {
               target="_blank">
               <FontAwesomeIcon className="social-icon" icon={faInstagram} />
             </a>
-            <a href="" 
+            <a href="https://www.threads.net/@milagresfoundation?xmt=AQGzjVZUE0V8cWfcxqXqffPvPuR6L2zJpyndewuJjSRN8Sw" 
               target="_blank">
-              <FontAwesomeIcon className="social-icon" icon={faXTwitter} />
+              <FontAwesomeIcon className="social-icon" icon={faThreads} />
             </a>
             <a href="http://www.youtube.com/@milagresfoundationngo9687" 
             target="_blank">
               <FontAwesomeIcon className="social-icon" icon={faYoutube} />
+            </a>
+            <a href="https://www.linkedin.com/in/milagres-foundation-bbb847250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+            target="_blank">
+              <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
             </a>
           </div>
           <div className="email">
