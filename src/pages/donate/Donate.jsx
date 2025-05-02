@@ -79,8 +79,12 @@ const Donate = () => {
   return (
     <div className="donate">
       <SEO 
-        title="Donate | Support Milagres Foundation's Mission of Compassion"
-        description="Your donation empowers children, families, and communities. Support Milagres Foundation’s mission to provide education, healthcare, and hope."
+        title="Donate | Support Milagres Foundation's Mission of 
+        Compassion"
+        description="Your donation empowers children, families, and 
+        communities. Support Milagres Foundation&apos;s mission to 
+        provide education, healthcare, and hope."
+        url="https://www.milagresfoundation.org/#/donate"
       />
       <HeroSection
         title="Support Our Cause"

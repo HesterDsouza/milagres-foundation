@@ -78,8 +78,12 @@ const JoinUs = () => {
   return (
     <div className="joinUs">
       <SEO 
-        title="Join Us | Become a Volunteer or Partner with Milagres Foundation"
-        description="Ready to make a difference? Join Milagres Foundation as a volunteer, donor, or partner and help bring hope and opportunities to those in need."
+        title="Join Us | Become a Volunteer or Partner with Milagres 
+        Foundation"
+        description="Ready to make a difference? Join Milagres Foundation 
+        as a volunteer, donor, or partner and help bring hope and 
+        opportunities to those in need."
+        url="https://www.milagresfoundation.org/#/join-us"
       />
       <HeroSection
         title={"Join Us"}

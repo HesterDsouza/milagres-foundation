@@ -27,8 +27,12 @@ const AboutUs = () => {
   return (
     <div className="aboutUs">
       <SEO 
-        title="About Us | Milagres Foundation - Committed to Social Change"
-        description="Learn more about Milagres Foundation's passionate team that put in efforts to bring lasting change to underserved communities."
+        title="About Us | Milagres Foundation - Committed to Social 
+        Change"
+        description="Learn more about Milagres Foundation's passionate 
+        team that put in efforts to bring lasting change to underserved 
+        communities."
+        url="https://www.milagresfoundation.org/#/about-us"
       />
       <HeroSection 
         title = "About Milagres Foundation"

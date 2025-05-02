@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="quick-links">
             <Link className="link" to="/our-work">Our Work</Link>
             <Link className="link" to="/about-us">About Us</Link>
-            {/* <Link className="link" to="/corporate-social-responsibility">CSR</Link> */}
+            <Link className="link" to="/corporate-social-responsibility">CSR</Link>
             <Link className="link" to="/join-us">Join Our Team</Link>
             <Link className="link" to="/contact-us">Contact Us</Link>
             <Link className="link" to="/donate">Donate</Link>

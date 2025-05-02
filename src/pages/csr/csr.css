@@ -1,19 +1,37 @@
 .csr{
-    .csr-intro, .csr-ways, .csr-impact, .csr-testimonials, .csr-cta{
-        padding: 0.5rem;
+    .csr-title,.csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta{
+        padding: 0.5rem 0.8rem;
         
         h2{
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 600;
             color: var(--deep-blue);
+            margin: 0;
         }
 
-        p, blockquote{
-            font-size: 1.6rem;
+        p, ul li{
+            font-size: 1.8rem;
         }
     }
 
-    .csr-ways .csr-options {
+    .csr-title{
+        text-align: center;
+
+        p{
+            font-size: 1.7rem;
+        }
+    }
+
+    .csr-objectives ul, .csr-impact ul {
+        list-style: disc;
+        padding-left: 2rem;
+
+        li{
+            font-size: 1.7rem;
+        }
+    }
+
+    .csr-program .csr-options {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -25,60 +43,45 @@
             background-color: var(--bg-secondary);
             border-radius: 10px;
             box-shadow: 0 4px 10px var(--box-shadow-light-blue);
+            transition: transform 0.3s ease;
 
             h3{
                 color: var(--royal-blue);
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             p{
-                font-size: 1.4rem;
-            }
-        }
-    }
-
-    .csr-impact ul{
-        list-style: none;
-        padding: 0;
-        
-        li {
-            font-size: 1.4rem;
-            
-            strong{
                 font-size: 1.6rem;
-                color: var(--royal-blue);
-            }            
-        }
-    }
+            }
 
-    .csr-testimonials blockquote{
-        text-align: center;
-
-        cite{
-            display: block;
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--light-blue);
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
     }
 
     .csr-cta {
-        p{
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        text-align: center;
 
-            a{
+        p{
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+
+            .contact-link{
                 font-size: 1.8rem;
                 font-weight: 600;
                 color: var(--text-gold);
                 transition: background-color 0.5s ease;
                 padding: 0.8rem;
                 border-radius: 1.5rem;
+                background-color: transparent;
 
                 &:hover{
-                    background-color: var(--royal-blue);
+                    background-color: var(--text-gold);
+                    color: #fff;
                 }
             }
         }

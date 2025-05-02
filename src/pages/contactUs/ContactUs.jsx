@@ -80,7 +80,10 @@ const ContactUs = () => {
     <div className="contactUs">
       <SEO 
         title="Contact Us | Get in Touch with Milagres Foundation"
-        description="Have questions or want to connect? Reach out to Milagres Foundation for support, collaboration, or general inquiries. We're here to help."
+        description="Have questions or want to connect? Reach out to 
+        Milagres Foundation for support, collaboration, or general 
+        inquiries. We're here to help."
+        url="https://www.milagresfoundation.org/#/contact-us"
       />
       <HeroSection
         title={"Contact Us"}

@@ -74,16 +74,20 @@ const OurWork = () => {
       title: "Children's Day celebration at labour camp",
     },
     {
-      images: [`${base}images/drawing-competion-christmas-day (1).jpg`, `${base}images/drawing-competion-christmas-day (2).jpg`],
-      title: "Christmas party with drawing competition for orphanage",
-    }
+      images: [`${base}hockey_tournament/hockey-tournament (28).jpg`,`${base}hockey_tournament/hockey-tournament (28).jpg`,],
+      title: "Hockey Tournament",
+    },
   ];
 
   return (
     <div className="ourWork">
       <SEO 
-        title="Our Work | Milagres Foundation - Empowering Lives through Action"
-        description="Discover how Milagres Foundation uplifts communities through education, healthcare, and social support. See the real impact of our initiatives."
+        title="Our Work | Milagres Foundation - Empowering Lives through 
+        Action"
+        description="Discover how Milagres Foundation uplifts communities 
+        through education, healthcare, and social support. See the real 
+        impact of our initiatives."
+        url="https://www.milagresfoundation.org/#/our-work"
       />
       <HeroSection 
         title={"Our Work"} 

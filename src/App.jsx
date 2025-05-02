@@ -1,9 +1,9 @@
-import {createBrowserRouter, RouterProvider, useNavigate} from "react-router-dom"
+import {Route, Routes, useNavigate} from "react-router-dom"
 import RootLayout from "./layouts/rootLayout/RootLayout";
 import HomePage from "./pages/homePage/HomePage";
 import OurWork from "./pages/ourWork/OurWork";
 import AboutUs from "./pages/aboutUs/AboutUs";
-// import CSR from "./pages/csr/CSR";
+import CSR from "./pages/csr/CSR";
 import JoinUs from "./pages/joinUs/JoinUs";
 import ContactUs from "./pages/contactUs/ContactUs";
 import Donate from "./pages/donate/Donate";
@@ -24,29 +24,20 @@ const RedirectHandler = ({children}) => {
 }
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      element: (
-        <RedirectHandler>
-          <RootLayout/>
-        </RedirectHandler>
-      ),
-      children: [
-        { path: "/", element: <HomePage/> },
-        { path: "/our-work", element: <OurWork/> },
-        { path: "/about-us", element: <AboutUs/> },
-        // { path: "/corporate-social-responsibility", element: <CSR/> },
-        { path: "/join-us", element: <JoinUs/> },
-        { path: "/contact-us", element: <ContactUs/> },
-        { path: "/donate", element: <Donate/> },
-      ]
-    }
-  ], 
-{
-  basename: "/"
-})
   return (
-    <RouterProvider router={router}/>
+    <RedirectHandler>
+      <Routes>
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<HomePage/>} />
+          <Route path = "our-work" element={<OurWork/>} />
+          <Route path = "about-us" element={<AboutUs/>} />
+          <Route path = "corporate-social-responsibility" element={<CSR/>} />
+          <Route path = "join-us" element={<JoinUs/>} />
+          <Route path = "contact-us" element={<ContactUs/>} />
+          <Route path = "donate" element={<Donate/>} />
+        </Route>
+      </Routes>
+    </RedirectHandler>
   )
 }
 

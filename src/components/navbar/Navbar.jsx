@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* <NavLink className="link" to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink> */}
           <NavLink className="link" to="/our-work" onClick={() => setMenuOpen(false)}>Our Work</NavLink>
           <NavLink className="link" to="/about-us" onClick={() => setMenuOpen(false)}>About Us</NavLink>
-          {/* <NavLink className="link" to="/corporate-social-responsibility" onClick={() => setMenuOpen(false)}>CSR</NavLink> */}
+          <NavLink className="link" to="/corporate-social-responsibility" onClick={() => setMenuOpen(false)}>CSR</NavLink>
           <NavLink className="link" to="/join-us" onClick={() => setMenuOpen(false)}>Join Our Team</NavLink>
           <NavLink className="link" to="/contact-us" onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
         </nav>
