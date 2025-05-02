@@ -1,6 +1,6 @@
 .csr{
     .csr-title,.csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta{
-        padding: 0.5rem 0.8rem;
+        padding: 0.8rem;
         
         h2{
             font-size: 2.2rem;
@@ -86,4 +86,80 @@
             }
         }
     }
+
+    @media (max-width: 900px) {
+    .csr-title, .csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p, li {
+        font-size: 1.6rem;
+      }
+    }
+
+    .csr-program .csr-options .csr-card {
+      h3 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .csr-title, .csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta {
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      p, li {
+        font-size: 1.5rem;
+      }
+    }
+
+    .csr-program .csr-options .csr-card {
+      h3, p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .csr-title, .csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta {
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p, li {
+        font-size: 1.4rem;
+      }
+    }
+
+    .csr-program .csr-options .csr-card {
+      h3, p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .csr-title, .csr-intro, .csr-objectives, .csr-program, .csr-impact, .csr-cta {
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p, li {
+        font-size: 1.2rem;
+      }
+    }
+
+    .csr-program .csr-options .csr-card {
+      h3, p {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

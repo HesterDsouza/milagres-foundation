@@ -11,6 +11,12 @@
             &:nth-child(odd):last-child{
                 grid-column: span 2;
                 margin: 0 auto;
+                width: 90%;
+                height: 450px;
+
+                .image-wrapper{
+                    height: 350px;
+                }
             }
         }
     }
@@ -40,6 +46,10 @@
                 width: 100%;
                 max-width: 480px;
                 margin: 0 auto;
+
+                &:nth-child(odd):last-child{
+                    width: 100%;
+                }
             }
         }
     }
