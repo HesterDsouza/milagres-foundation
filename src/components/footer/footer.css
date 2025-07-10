@@ -125,11 +125,22 @@
                 }
             }
         }
-    }    
+    }
 
     .copyright{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+
+        .policy-link{
+            font-size: 1.4rem;
+            color: var(--text-gold);
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
 
         p{
             font-size: 1.4rem;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import "./footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faFacebookF, faInstagram, faLinkedin, faThreads, faYoutube} from "@fortawesome/free-brands-svg-icons"
@@ -73,6 +73,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
+        <NavLink to="/privacy-policy" className="policy-link">Privacy Policy</NavLink>
         <p>© 2025 All Rights Reserved. <Link to="/">Milagres Foundation</Link></p>
       </div>
     </div>

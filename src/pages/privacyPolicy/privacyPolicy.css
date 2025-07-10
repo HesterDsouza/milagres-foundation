@@ -1,0 +1,27 @@
+.privacyPolicy{
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    p, a, ul li{
+        font-size: 1.6rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    h1, h2{
+        color: var(--deep-blue);
+    }
+
+    a{
+        color: var(--text-gold);
+        text-decoration: underline;
+    }
+}
