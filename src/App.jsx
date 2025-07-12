@@ -8,9 +8,8 @@ import JoinUs from "./pages/joinUs/JoinUs";
 import ContactUs from "./pages/contactUs/ContactUs";
 import Donate from "./pages/donate/Donate";
 import { useEffect } from "react";
-import MetaPixelScript from "./components/MetaPixelScript";
-import MetaPixelTracker from "./components/MetaPixelTracker";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
+import MetaPixel from "./components/MetaPixel";
 
 const RedirectHandler = ({children}) => {
   const navigate = useNavigate();
@@ -29,8 +28,7 @@ const RedirectHandler = ({children}) => {
 const App = () => {
   return (
     <RedirectHandler>
-      <MetaPixelScript />
-      <MetaPixelTracker />
+      <MetaPixel />
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<HomePage/>} />
