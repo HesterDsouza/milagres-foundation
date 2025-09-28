@@ -1,4 +1,5 @@
 // import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FAQ from "../../components/faq/FAQ";
 import "./homePageAlt.css"
 import { useState } from "react";
@@ -155,7 +156,7 @@ const HomePageAlt = () => {
         </div>
 
         <div className="gallery-button">
-          <button className="btn-primary">View More Photos</button>
+          <button className="btn-primary"><Link to={"/events"}>View More Photos</Link></button>
         </div>
       </section>
 
