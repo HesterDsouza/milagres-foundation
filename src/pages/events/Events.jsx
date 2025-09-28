@@ -1,10 +1,10 @@
-import "./ourWork.css"
+import "./events.css"
 import InfoCard from "../../components/infoCard/InfoCard"
-import HeroSection from "../../components/heroSection/HeroSection"
+// import HeroSection from "../../components/heroSection/HeroSection"
 import SEO from "../../components/SEO/SEO";
 // import LatestEvents from "../../components/latestEvents/LatestEvents";
 
-const OurWork = () => {
+const Events = () => {
   const base = import.meta.env.BASE_URL;
 
   const works = [
@@ -101,28 +101,49 @@ const OurWork = () => {
   ];
 
   return (
-    <div className="ourWork">
+    <div className="events">
       <SEO 
         title="Our Work | Milagres Foundation - Empowering Lives through 
         Action"
         description="Discover how Milagres Foundation uplifts communities 
         through education, healthcare, and social support. See the real 
         impact of our initiatives."
-        url="https://www.milagresfoundation.org/#/our-work"
+        url="https://www.milagresfoundation.org/#/eventse"
       />
-      <HeroSection 
+      {/* <HeroSection 
         title={"Our Work"} 
         subTitle={"Creating meaningful change, one act of kindness at a time."} 
         image={`${base}images/food-clothes-distribution (23).jpg`} 
-        image_alt={"Grocery Distribution"}/>
+        image_alt={"Grocery Distribution"}/> */}
         {/* <LatestEvents /> */}
-      <div className="projects">
-        {works.map((work, index) => (
+      <section className="projects" id="programs">
+        {[...works].reverse().map((work, index) => (
           <InfoCard key={index} title={work.title} images={work.images} class_name="our-work"/>
         ))}
-      </div>
+      </section>
+
+      <section id="gallery" className="events-gallery">
+        <h2>Gallery</h2>
+        <p>Photos from our events and activities</p>
+
+        <div className="gallery-grid">
+          {[
+            `${base}images/food-distribution (1).jpg`,
+            `${base}images/plantation (3).jpg`,
+            `${base}images/blood-donation-camp (1).jpg`,
+            `${base}images/tree-plantation (4).jpg`,
+            `${base}images/children-day-celebration (1).jpg`,
+            `${base}hockey_tournament/hockey-tournament (13).jpg`
+          ].map((src, i) => (
+            <div key={i} className="gallery-item">
+              <img src={src} alt={`Gallery image ${i + 1}`} />
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   )
 }
 
-export default OurWork
+export default Events

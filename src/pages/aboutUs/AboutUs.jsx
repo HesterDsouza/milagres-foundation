@@ -1,5 +1,5 @@
 import { useState } from "react"
-import HeroSection from "../../components/heroSection/HeroSection"
+// import HeroSection from "../../components/heroSection/HeroSection"
 import "./aboutUs.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons";
@@ -34,12 +34,17 @@ const AboutUs = () => {
         communities."
         url="https://www.milagresfoundation.org/#/about-us"
       />
-      <HeroSection 
+      {/* <HeroSection 
         title = "About Milagres Foundation"
         subTitle = "Empowering marginalized communities through education, healthcare, and support since 2014."
         image = {`${base}images/blood-donation-camp (7).jpg`}
         image_alt = "Milagres Foundation Team"
-      />
+      /> */}
+
+      <section id="foundersMessage" className="founder-section">
+        <h2>Founder&apos;s Message</h2>
+        <p>“Our mission is to empower communities through education and compassion.” - John Fernandes</p>
+      </section>
 
       <section className="about-content">
         <div className="text-content">
@@ -72,6 +77,7 @@ const AboutUs = () => {
         old age homes, providing financial support to farmers, and many 
         others.
         </p>
+
         <div className="grid-container">
           <div className="grid-item">
             <img loading="lazy" src={`${base}images/food-distribution (2).jpg`} alt="Food Distribution"/>
@@ -91,6 +97,16 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <section id="volunteers" className="volunteer-section">
+          <h2>Our Volunteers</h2>
+          <div className="volunteer-grid">
+            {[`${base}slider1.jpg`, `${base}slider3.jpg`].map((v,i)=>(
+              <img key={i} src={v} alt={`Volunteer ${i+1}`}/>
+            ))}
+          </div>
+        </section>
+
       <section className="reports">
         <h2>Reports</h2>
         <p>View our reports and compliance documents</p>

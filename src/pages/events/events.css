@@ -1,0 +1,208 @@
+.events {
+  /* ---------- PROJECTS SECTION ---------- */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+
+    .card.our-work {
+      cursor: default;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--box-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 16px var(--box-shadow);
+      }
+
+      /* For odd last card (when grid has odd items) */
+      &:nth-child(odd):last-child {
+        grid-column: span 3;
+        margin: 0 auto;
+        width: 85%;
+        height: auto;
+
+        .image-wrapper {
+          height: 320px;
+        }
+      }
+    }
+  }
+
+  /* ---------- EVENTS GALLERY ---------- */
+  .events-gallery {
+    margin-top: 5rem;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      color: var(--text-secondary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px var(--box-shadow);
+        background: var(--bg);
+
+        img {
+          width: 100%;
+          height: 220px;
+          object-fit: cover;
+          border-radius: 12px;
+          transition: transform 0.4s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+  /* Desktops (≥1200px) */
+  @media (min-width: 1200px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .events-gallery h2 {
+      font-size: 2.6rem;
+    }
+
+    .events-gallery p {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Laptops (992px – 1199px) */
+  @media (max-width: 1199px) {
+    .projects {
+      grid-template-columns: repeat(2, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .events-gallery .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
+
+  /* Tablets (768px – 991px) */
+  @media (max-width: 991px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+      .card.our-work:nth-child(odd):last-child {
+        grid-column: span 2;
+        width: 100%;
+      }
+    }
+
+    .events-gallery h2 {
+      font-size: 2.2rem;
+    }
+
+    .events-gallery p {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* Mobiles (≤767px) */
+  @media (max-width: 767px) {
+    .projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1rem;
+
+      .card.our-work {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+
+        &:nth-child(odd):last-child {
+          width: 100%;
+        }
+      }
+    }
+
+    .events-gallery {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 1.9rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .gallery-item img {
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  /* Small Mobiles (≤480px) */
+  @media (max-width: 480px) {
+    .projects .card.our-work {
+      max-width: 350px;
+    }
+
+    .events-gallery h2 {
+      font-size: 1.6rem;
+    }
+
+    .events-gallery p {
+      font-size: 1.2rem;
+    }
+
+    .events-gallery .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      .gallery-item img {
+        height: 200px;
+      }
+    }
+  }
+
+  /* Extra Small (≤360px) */
+  @media (max-width: 360px) {
+    .projects .card.our-work {
+      max-width: 320px;
+    }
+
+    .events-gallery .gallery-item img {
+      height: 180px;
+    }
+  }
+}

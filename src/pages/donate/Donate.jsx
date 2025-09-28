@@ -1,6 +1,6 @@
 // import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import HeroSection from "../../components/heroSection/HeroSection";
+// import HeroSection from "../../components/heroSection/HeroSection";
 import "./donate.css";
 import { useState } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -86,12 +86,12 @@ const Donate = () => {
         provide education, healthcare, and hope."
         url="https://www.milagresfoundation.org/#/donate"
       />
-      <HeroSection
+      {/* <HeroSection
         title="Support Our Cause"
         subTitle="Your generosity helps us continue our mission of uplifting communities in need."
         image={`${base}images/donations (2).jpg`}
         image_alt="Donation Event"
-      />
+      /> */}
 
       <section className="donate-content">
         <div className="text-content">

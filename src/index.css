@@ -20,15 +20,15 @@
     --text-gold-faded: #ffd900a2;
     --text-maroon: #de0000;
 
-    --deep-blue: #003f7f; /* headers, buttons */
-    --deep-blue-faded: #003f7f97;
-    --royal-blue: #0074cc; /* links, highlights, call-to-action */
-    --royal-blue-faded: #0074cc6a;
+    --deep-blue: #003366; /* headers, buttons */
+    --deep-blue-faded: #00336697;
+    --royal-blue: #0059b3; /* links, highlights, call-to-action */
+    --royal-blue-faded: #0059b36a;
     --light-blue: #66b2ff; /* hover effects, secondary buttons */
-    --light-blue-faded: #66b3ff64;
+    --light-blue-faded: #66b2ff64;
     --facebook: #1877f2;
     --instagram: #e4405f;
-    --twitter-x: #010101;
+    --threads: #010101;
     --youtube: #f00;
     --linkedin: #74c0fc;
 
@@ -37,7 +37,8 @@
     --bg-secondary-faded: #f5f5f5e7;
     --bg-contrast: #e3e3e3; /*background for navbar, footer*/
     --box-shadow: #4b4b4b8b;
-    --box-shadow-light-blue: #66b3ffb6;
+    --box-shadow-light-blue: #66b2ffb6;
+    --box-shadow-deep-blue: #003f7fb6;
 }
 
 *{

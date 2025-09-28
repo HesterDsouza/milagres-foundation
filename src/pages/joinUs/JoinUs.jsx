@@ -1,12 +1,12 @@
 import { useState } from "react";
-import HeroSection from "../../components/heroSection/HeroSection";
+// import HeroSection from "../../components/heroSection/HeroSection";
 import "./joinUs.css";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import SEO from "../../components/SEO/SEO";
 
 const JoinUs = () => {
-  const base = import.meta.env.BASE_URL;
+  // const base = import.meta.env.BASE_URL;
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", reason: ""
   })
@@ -85,21 +85,21 @@ const JoinUs = () => {
         opportunities to those in need."
         url="https://www.milagresfoundation.org/#/join-us"
       />
-      <HeroSection
+      {/* <HeroSection
         title={"Join Us"}
         subTitle={"Be a part of Milagres Foundation and make a difference in the community."}
         image={`${base}join-us-hero.jpg`}
         image_alt={"Join Us"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}
-      />
+      /> */}
 
       <section className="join-us-intro">
         <h2>Why Join Milagres Foundation?</h2>
         <p>We believe that collective efforts can bring meaningful change. Whether you&apos;re looking to volunteer, donate, or collaborate, we welcome your support in our mission to uplift marginalized communities.</p>
       </section>
 
-      <section className="join-us-form">
+      <section id="volunteer" className="join-us-form">
         <h2>Become a Volunteer</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -128,6 +128,11 @@ const JoinUs = () => {
           </div>
           <button type="submit" className="join-submit">Join Us</button>
         </form>
+      </section>
+
+      <section id="donate-item" className="donate-items">
+        <h2>Donate Commodities</h2>
+        <p>You can support us by donating groceries, books, clothes, or other useful items.</p>
       </section>
     </div>
   );

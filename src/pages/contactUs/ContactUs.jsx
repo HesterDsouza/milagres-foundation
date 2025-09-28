@@ -1,12 +1,12 @@
 import { useState } from "react";
-import HeroSection from "../../components/heroSection/HeroSection";
+// import HeroSection from "../../components/heroSection/HeroSection";
 import "./contactUs.css";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser"
 import SEO from "../../components/SEO/SEO";
 
 const ContactUs = () => {
-  const base = import.meta.env.BASE_URL;
+  // const base = import.meta.env.BASE_URL;
 
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", message: ""
@@ -85,14 +85,14 @@ const ContactUs = () => {
         inquiries. We're here to help."
         url="https://www.milagresfoundation.org/#/contact-us"
       />
-      <HeroSection
+      {/* <HeroSection
         title={"Contact Us"}
         subTitle={"Get in touch with Milagres Foundation for inquiries, partnerships, and support."}
         image={`${base}contact-us-hero.jpg`}
         image_alt={"Contact Us"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}
-      />
+      /> */}
 
       <section className="contact-us-intro">
         <h2>We&apos;d Love to Hear from You</h2>

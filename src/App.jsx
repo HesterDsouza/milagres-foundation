@@ -1,7 +1,6 @@
 import {Route, Routes, useNavigate} from "react-router-dom"
 import RootLayout from "./layouts/rootLayout/RootLayout";
-import HomePage from "./pages/homePage/HomePage";
-import OurWork from "./pages/ourWork/OurWork";
+// import HomePage from "./pages/homePage/HomePage";
 import AboutUs from "./pages/aboutUs/AboutUs";
 import CSR from "./pages/csr/CSR";
 import JoinUs from "./pages/joinUs/JoinUs";
@@ -10,6 +9,9 @@ import Donate from "./pages/donate/Donate";
 import { useEffect } from "react";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import MetaPixel from "./components/MetaPixel";
+import HomePageAlt from "./pages/homePageAlt/homePageAlt";
+import Events from "./pages/events/Events";
+import ScrollToHash from "./components/ScrollToHash";
 
 const RedirectHandler = ({children}) => {
   const navigate = useNavigate();
@@ -29,10 +31,11 @@ const App = () => {
   return (
     <RedirectHandler>
       <MetaPixel />
+      <ScrollToHash/>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          <Route index element={<HomePage/>} />
-          <Route path = "our-work" element={<OurWork/>} />
+          <Route index element={<HomePageAlt/>} />
+          <Route path = "events" element={<Events/>} />
           <Route path = "about-us" element={<AboutUs/>} />
           <Route path = "corporate-social-responsibility" element={<CSR/>} />
           <Route path = "join-us" element={<JoinUs/>} />

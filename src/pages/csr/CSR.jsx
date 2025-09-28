@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import HeroSection from "../../components/heroSection/HeroSection"
+// import HeroSection from "../../components/heroSection/HeroSection"
 import "./csr.css"
 import SEO from "../../components/SEO/SEO"
 
 const CSR = () => {
-  const base = import.meta.env.BASE_URL;
+  // const base = import.meta.env.BASE_URL;
 
   return (
     <div className="csr">
@@ -12,13 +12,13 @@ const CSR = () => {
         title="Corporate-Social-Responsibility | Milagres Foundation"
         description="Discover how Milagres Foundation partners with organizations to drive impactful CSR initiatives, fostering community development and positive social change."
       />
-      <HeroSection 
+      {/* <HeroSection 
         title={"Corporate Social Responsibility (CSR)"} 
         subTitle={"Partner with Milagres Foundation to create a lasting social impact."} 
         image={`${base}csr-hero.jpg`} image_alt={"Corporate Social Responsibility"}
         attribution_text={"Designed by Freepik"}
         attribution_link={"https://www.freepik.com/"}
-      />
+      /> */}
 
       <section className="csr-title">
         <h2>
