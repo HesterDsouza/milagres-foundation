@@ -1,3 +1,6 @@
+/* -------------------------
+   Base Styles (default = Desktop Large)
+------------------------- */
 .homePage {
   font-size: 1.6rem;
 }
@@ -42,6 +45,7 @@
   cursor: pointer;
 }
 
+/* QR Modal */
 .qr-modal {
   position: fixed;
   top: 5%;
@@ -55,106 +59,90 @@
   backdrop-filter: blur(6px);
   animation: fadeIn 0.3s ease;
   z-index: 999;
+}
 
-  .qr-content {
-    position: relative;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 1rem;
+.qr-modal .qr-content {
+  position: relative;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 12px 28px #0000003c;
+  animation: scaleIn 0.3s ease;
+}
+
+.qr-modal .qr-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--deep-blue);
+  margin-bottom: 0.5rem;
+}
+
+.qr-modal .qr-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.qr-modal .qr-content img {
+  width: 220px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.8s ease;
+}
+
+.qr-modal .qr-content img:hover {
+  transform: scale(1.05);
+}
+
+.qr-modal .qr-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-maroon);
+  transition: background-color 0.8s, transform 0.8s;
+}
+
+.qr-modal .qr-close:hover {
+  background-color: #a00000;
+  transform: rotate(90deg);
+}
+
+.homePage section {
+    padding: 4rem 2rem;
     text-align: center;
-    min-width: 400px;
-    /* width: 90%; */
-    box-shadow: 0 12px 28px #0000003c;
-    animation: scaleIn 0.3s ease;
 
-    h3 {
-      font-size: 1.8rem;
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
       font-weight: 700;
       color: var(--deep-blue);
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
 
     p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    img {
-      width: 220px;
-      height: auto;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      max-width: 900px;
       margin: 0 auto;
-      border-radius: 12px;
-      /* border: 2px solid var(--royal-blue); */
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-      transition: transform 0.8s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-
-    .qr-close {
-      position: absolute;
-      top: 1.2rem;
-      right: 1.2rem;
-      width: 3.6rem;
-      height: 3.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 50%;
-      border: none;
-      background-color: var(--text-maroon);
-      transition: background-color 0.8s, transform 0.8s;
-
-      &:hover {
-        background-color: #a00000;
-        transform: rotate(90deg);
-      }
     }
   }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-section:nth-of-type(even) {
-  background: #fff;
-}
-
-section:nth-of-type(odd) {
-  background: var(--bg-secondary);
-}
-
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--deep-blue);
-  margin-bottom: 2rem;
-}
-
+/* About Section */
 .about-us {
   padding: 5rem 2rem;
 }
@@ -200,18 +188,18 @@ section h2 {
   gap: 3rem;
   margin-top: 2rem;
 }
+
 .about-stats div {
   text-align: center;
 }
+
 .about-stats span {
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--royal-blue);
 }
 
-/* -------------------------
-   Programs Section
-------------------------- */
+/* Programs */
 .programs-section {
   padding: 5rem 2rem;
 }
@@ -273,9 +261,7 @@ section h2 {
   background: var(--deep-blue);
 }
 
-/* -------------------------
-   Gallery Section
-------------------------- */
+/* Gallery */
 .gallery-section {
   padding: 5rem 2rem;
 }
@@ -332,8 +318,6 @@ section h2 {
   background: var(--royal-blue);
   color: #fff;
   padding: 0.8rem 2rem;
-  font-size: 1.4rem;
-  font-weight: 600;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -341,11 +325,17 @@ section h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.gallery-button .btn-primary a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 .gallery-button .btn-primary:hover {
   background: var(--deep-blue);
   transform: translateY(-2px);
 }
 
+/* Team */
 .team-section {
   padding: 4rem 2rem;
   background: var(--bg-secondary);
@@ -357,6 +347,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .team-card {
@@ -364,13 +355,14 @@ section h2 {
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
 }
 
 .team-card img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -394,6 +386,7 @@ section h2 {
   opacity: 1;
 }
 
+/* Donate */
 .donate-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -405,7 +398,6 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Flex layout for alt-donate + QR side by side */
 .alt-qr {
   display: flex;
   align-items: flex-start;
@@ -417,11 +409,11 @@ section h2 {
 }
 
 .altDonate {
-  flex: 1; /* 50% width */
+  flex: 1;
 }
 
 .qr-container {
-  flex: 1; /* 50% width */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,40 +452,90 @@ section h2 {
   background: #f0f8ff;
   border-left: 5px solid #0055cc;
   border-radius: 6px;
-  display: block;
   font-size: 1.4rem;
 }
 
 /* -------------------------
-   Responsive (mobile)
+   Responsive Breakpoints
 ------------------------- */
-@media (max-width: 768px) {
-  .alt-qr {
-    flex-direction: column;
-    text-align: center;
+
+/* Laptop (992px - 1199px) */
+@media (max-width: 1199px) {
+  #home .hero-content h1 {
+    font-size: 2.8rem;
   }
 
-  .altDonate,
-  .qr-container {
-    flex: 100%;
+  .about-container {
+    gap: 2rem;
   }
 
-  .alt-list li {
-    text-align: center;
+  .team-card {
+    height: 350px;
+    width: 350px;
   }
 }
 
-/* -------------------------
-   Responsive
-------------------------- */
-@media (max-width: 768px) {
-  .about-container,
-  .donate-container {
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .about-container {
     flex-direction: column;
     text-align: center;
   }
 
   .about-stats {
     justify-content: center;
+  }
+
+  .programs-container,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    flex-direction: column;
+  }
+
+  .team-card {
+    width: 80%;
+    height: auto;
+  }
+
+  .alt-qr {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  #home .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  #home .hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .qr-modal .qr-content {
+    min-width: 90%;
+  }
+
+  .programs-container,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card img {
+    height: 160px;
+  }
+
+  .team-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .alt-list li {
+    text-align: center;
+    font-size: 1.2rem;
   }
 }

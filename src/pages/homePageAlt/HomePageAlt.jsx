@@ -112,7 +112,7 @@ const HomePageAlt = () => {
               <div className="program-text">
                 <h3>{program.title}</h3>
                 <p>{program.desc}</p>
-                <button>Learn More →</button>
+                <button className="btn-primary">Learn More →</button>
               </div>
             </div>
           ))}

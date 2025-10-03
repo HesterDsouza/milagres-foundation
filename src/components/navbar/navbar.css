@@ -1,113 +1,312 @@
+/* ================= NAVBAR BASE ================= */
 .nav-bar {
   background: var(--deep-blue);
   color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 5px var(--box-shadow-deep-blue);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 3px 6px var(--box-shadow-deep-blue);
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 40px;
-  position: sticky;
-  /* top: 1px; */
+  width: 100%;
 }
 
+/* Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
+/* ================= LOGO ================= */
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 48px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.05);
 }
 
 .nav-logo a {
-  font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
+.nav-logo a:hover {
+  color: var(--royal-blue-light);
+}
+
+/* ================= LINKS ================= */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .nav-links a,
 .nav-links .dropdown-toggle {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   position: relative;
-  transition: color 0.3s;
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links .dropdown-toggle:hover {
-  cursor: pointer;
-  border-bottom: 3px solid var(--royal-blue);
+  color: var(--royal-blue-light);
 }
 
+/* underline animation */
+.nav-links a::after,
+.nav-links .dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--royal-blue-light);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .dropdown-toggle:hover::after {
+  width: 100%;
+}
+
+/* ================= DROPDOWN ================= */
 .nav-link-drop-down {
   position: relative;
+}
+
+.dropdown-toggle svg {
+  margin-left: 0.4rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-drop-down.open .dropdown-toggle > svg {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: -5%;
-  background-color: #fff;
+  top: 120%;
+  left: 0;
+  background: #fff;
   color: var(--text-primary);
-  min-width: 180px;
-  box-shadow: 0 4px 8px var(--box-shadow);
-  border-radius: 8px;
-  overflow: hidden;
+  min-width: 220px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
   flex-direction: column;
   z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav-link-drop-down.open .dropdown-menu {
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-menu a {
   padding: 1rem 1.5rem;
   color: var(--deep-blue);
   font-size: 1.4rem;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--royal-blue-faded);
+  background: var(--royal-blue-faded);
   color: var(--royal-blue);
 }
 
-.dropdown-toggle svg {
-  margin-left: 0.3rem;
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 2.2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.nav-link-dropdown.open .dropdown-toggle > svg {
-  transform: rotate(180deg);
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
-/* Desktop hover */
-@media (min-width: 769px) {
-  .nav-link-drop-down:hover .dropdown-menu {
+/* =================================================
+   RESPONSIVE BREAKPOINTS
+================================================= */
+
+/* --------- Large Desktops (1200px and up) --------- */
+@media (min-width: 1200px) {
+  .nav-logo img {
+    height: 52px;
+  }
+  .nav-logo a {
+    font-size: 2.2rem;
+  }
+  .nav-links a,
+  .nav-links .dropdown-toggle {
+    font-size: 1.7rem;
+  }
+  .dropdown-menu a {
+    font-size: 1.5rem;
+  }
+}
+
+/* --------- Laptops (1024px to 1199px) --------- */
+@media (max-width: 1199px) {
+  .nav-logo img {
+    height: 44px;
+  }
+  .nav-logo a {
+    font-size: 1.9rem;
+  }
+  .nav-links {
+    gap: 2rem;
+  }
+  .nav-links a,
+  .nav-links .dropdown-toggle {
+    font-size: 1.5rem;
+  }
+}
+
+/* --------- Tablets (768px to 1023px) --------- */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    gap: 1.5rem;
+    border-top: none;
+  }
+  .nav-links a,
+  .nav-links .dropdown-toggle {
+    font-size: 1.4rem;
+    padding: 0.4rem 0.2rem;
+  }
+  .dropdown-menu {
+    position: absolute;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    background: #fff;
+    border-radius: 6px;
+    display: none;
+  }
+  .nav-link-drop-down.open .dropdown-menu {
     display: flex;
   }
 }
 
-/* Mobile click toggle */
-@media (max-width: 768px) {
-  .dropdown-menu.open {
+/* --------- Mobiles (480px to 767px) --------- */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .hamburger #icon{
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    display: none; /* hide by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    flex-direction: column;
+    background: var(--deep-blue);
+    padding: 1rem 2rem;
+    gap: 1.2rem;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when menuOpen=true */
+    align-items: flex-end;
+    border-bottom-left-radius: 10px;
+  }
+
+  .nav-links a,
+  .nav-links .dropdown-toggle {
+    font-size: 1.3rem;
+    width: max-content;
     display: flex;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static; /* so it flows within mobile menu */
+    box-shadow: none;
+    /* background: var(--royal-blue-faded); */
+    border-radius: 6px;
+  }
+
+  .dropdown-menu a {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+
+/* --------- Small Mobiles (below 480px) --------- */
+@media (max-width: 479px) {
+  .nav-logo img {
+    height: 34px;
+  }
+  .nav-logo a {
+    font-size: 1.4rem;
+  }
+  .hamburger {
+    font-size: 1.8rem;
+  }
+  .nav-links a,
+  .nav-links .dropdown-toggle {
+    font-size: 1.2rem;
+  }
+  .dropdown-menu a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Slide-down animation for mobile menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
